@@ -12,7 +12,9 @@ import org.junit.*;
 import org.junit.rules.ErrorCollector;
 import org.junit.rules.ExpectedException;
 
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 import static org.hamcrest.core.Is.is;
 
@@ -39,10 +41,10 @@ public class LocacaoServiceTest extends TestCase {
         //cenario
         LocacaoService service = new LocacaoService();
         Usuario usuario = new Usuario("Usuario 1");
-        Filme filme = new Filme("Filme 1", 0, 5.0);
+        List<Filme> filmes = Arrays.asList(new Filme ("Filme 1", 0, 5.0));
 
         //acao
-        Locacao locacao = service.alugarFilme(usuario, filme);
+        Locacao locacao = service.alugarFilme(usuario, filmes);
 
         //verificacao
         error.checkThat(locacao.getValor(), CoreMatchers.is(CoreMatchers.equalTo(5.0)));
@@ -55,21 +57,21 @@ public class LocacaoServiceTest extends TestCase {
         //cenario
         LocacaoService service = new LocacaoService();
         Usuario usuario = new Usuario("Usuario 1");
-        Filme filme = new Filme("Filme 2", 0, 4.0);
+        List<Filme> filmes = Arrays.asList(new Filme ("Filme 1", 0, 5.0));
 
         //acao
-        service.alugarFilme(usuario, filme);
+        service.alugarFilme(usuario, filmes);
     }
 
     @Test
     public void testLocacao_usuarioVazioa() throws FilmeSemEstoqueException {
         //cenario
         LocacaoService service = new LocacaoService();
-        Filme filme = new Filme("Filme 2", 2, 4.0);
+        List<Filme> filmes = Arrays.asList(new Filme ("Filme 1", 2, 5.0));
 
         //acao
         try {
-            service.alugarFilme(null, filme);
+            service.alugarFilme(null, filmes);
             Assert.fail();
         } catch (LocadoraException e) {
             Assert.assertThat(e.getMessage(), is("Usuario vazio"));
