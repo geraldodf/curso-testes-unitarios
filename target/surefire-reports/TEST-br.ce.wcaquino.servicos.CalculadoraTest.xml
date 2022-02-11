@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="br.ce.wcaquino.servicos.CalculadoraTest" time="0.001" tests="4" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\geral\OneDrive\Área de Trabalho\Programação\TestesUnitarios\target\test-classes;C:\Users\geral\OneDrive\Área de Trabalho\Programação\TestesUnitarios\target\classes;C:\Users\geral\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\geral\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://openjdk.java.net/"/>
+    <property name="user.timezone" value="America/Sao_Paulo"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="BR"/>
+    <property name="sun.boot.library.path" value="D:\Java\bin"/>
+    <property name="sun.java.command" value="C:\Users\geral\AppData\Local\Temp\surefire3556464720270545376\surefirebooter18234534515302991806.jar C:\Users\geral\AppData\Local\Temp\surefire3556464720270545376 2022-02-11T14-18-13_870-jvmRun1 surefire18069228604618519618tmp surefire_08377611957225697481tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\geral\OneDrive\Área de Trabalho\Programação\TestesUnitarios\target\test-classes;C:\Users\geral\OneDrive\Área de Trabalho\Programação\TestesUnitarios\target\classes;C:\Users\geral\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\geral\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\geral"/>
+    <property name="user.language" value="pt"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2021-01-19"/>
+    <property name="java.home" value="D:\Java"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\geral\OneDrive\Área de Trabalho\Programação\TestesUnitarios"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\geral\AppData\Local\Temp\surefire3556464720270545376\surefirebooter18234534515302991806.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.10+8-LTS-162"/>
+    <property name="user.name" value="geral"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="18.9"/>
+    <property name="localRepository" value="C:\Users\geral\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\geral\AppData\Local\Temp\"/>
+    <property name="idea.version" value="2021.1.3"/>
+    <property name="java.version" value="11.0.10"/>
+    <property name="user.dir" value="C:\Users\geral\OneDrive\Área de Trabalho\Programação\TestesUnitarios"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="D:\Java\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\Git\cmd;C:\Users\geral\OneDrive\Área de Trabalho\Programação\apache-maven-3.8.1\bin;D:\Node JS\;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\geral\AppData\Local\Microsoft\WindowsApps;C:\Users\geral\AppData\Roaming\npm;."/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vm.version" value="11.0.10+8-LTS-162"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="55.0"/>
+  </properties>
+  <testcase name="deveSomarDoisValores" classname="br.ce.wcaquino.servicos.CalculadoraTest" time="0"/>
+  <testcase name="deveLancarExcecaoAodividirPorZero" classname="br.ce.wcaquino.servicos.CalculadoraTest" time="0"/>
+  <testcase name="deveSubtrairDoisValores" classname="br.ce.wcaquino.servicos.CalculadoraTest" time="0"/>
+  <testcase name="deveDividirDoisValores" classname="br.ce.wcaquino.servicos.CalculadoraTest" time="0"/>
+</testsuite>
