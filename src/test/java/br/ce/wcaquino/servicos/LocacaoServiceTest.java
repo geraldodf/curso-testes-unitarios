@@ -13,6 +13,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+import br.ce.wcaquino.servicos.matchers.DiaSemanaMatcher;
+import br.ce.wcaquino.servicos.matchers.MatchersProprios;
 import org.junit.*;
 import org.junit.rules.ErrorCollector;
 import org.junit.rules.ExpectedException;
@@ -104,5 +106,9 @@ public class LocacaoServiceTest {
 		//verificacao
 		boolean ehSegunda = DataUtils.verificarDiaSemana(retorno.getDataRetorno(), Calendar.MONDAY);
 		Assert.assertTrue(ehSegunda);
+
+	//	Assert.assertThat(retorno.getDataRetorno(), new DiaSemanaMatcher(Calendar.SUNDAY));
+	//	Assert.assertThat(retorno.getDataRetorno(), MatchersProprios.caiEm(Calendar.SATURDAY));
+	//	assertThat(retorno.getDataRetorno(), caiNumaSegunda());
 	}
 }
