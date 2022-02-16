@@ -6,7 +6,7 @@ import org.junit.runners.MethodSorters;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class OrdemTest {
 
-    public static Integer contador = 0;
+    public static int contador = 0;
 
     @Test
     public void inicia(){
@@ -15,6 +15,6 @@ public class OrdemTest {
 
     @Test
     public void verifica(){
-        Assert.assertEquals(java.util.Optional.of(1), contador);
+        Assert.assertEquals(1, contador);
     }
 }
