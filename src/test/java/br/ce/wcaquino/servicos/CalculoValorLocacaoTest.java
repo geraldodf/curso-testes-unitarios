@@ -9,6 +9,8 @@ import java.util.List;
 
 import br.ce.wcaquino.buiders.FilmeBuilder;
 import br.ce.wcaquino.buiders.UsuarioBuilder;
+import br.ce.wcaquino.daos.LocacaoDAO;
+import br.ce.wcaquino.daos.LocacaoDAOFake;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -39,6 +41,8 @@ public class CalculoValorLocacaoTest {
     @Before
     public void setup() {
         service = new LocacaoService();
+        LocacaoDAO dao = new LocacaoDAOFake();
+        service.setLocacaoDAO(dao);
     }
 
     private static Filme filme1 = FilmeBuilder.umFilme().agora();
