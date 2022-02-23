@@ -79,10 +79,12 @@ public class LocacaoService {
         return locacao;
     }
 
-    public void notificarAtrasos(){
+    public void notificarAtrasos() {
         List<Locacao> locacoes = dao.obterLocacoesPendentes();
-        for(Locacao locacao: locacoes){
-            emailService.notificarAtraso(locacao.getUsuario());
+        for (Locacao locacao : locacoes) {
+            if (locacao.getDataRetorno().before(new Date())) {
+                emailService.notificarAtraso(locacao.getUsuario());
+            }
         }
     }
 
@@ -94,7 +96,7 @@ public class LocacaoService {
         spcService = spc;
     }
 
-    public void setEmailService(EmailService email){
+    public void setEmailService(EmailService email) {
         emailService = email;
     }
 
