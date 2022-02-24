@@ -27,13 +27,21 @@ import br.ce.wcaquino.entidades.Usuario;
 import br.ce.wcaquino.exceptions.FilmeSemEstoqueException;
 import br.ce.wcaquino.exceptions.LocadoraException;
 import br.ce.wcaquino.utils.DataUtils;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
 
 public class LocacaoServiceTest {
 
+    @InjectMocks
     private LocacaoService service;
+
+    @Mock
     private SPCService spc;
+    @Mock
     private LocacaoDAO dao;
+    @Mock
     private EmailService email;
 
     @Rule
@@ -44,13 +52,7 @@ public class LocacaoServiceTest {
 
     @Before
     public void setup() {
-        service = new LocacaoService();
-        dao = Mockito.mock(LocacaoDAO.class);
-        service.setLocacaoDAO(dao);
-        spc = Mockito.mock(SPCService.class);
-        service.setSpcService(spc);
-        email = Mockito.mock(EmailService.class);
-        service.setEmailService(email);
+        MockitoAnnotations.initMocks(this);
     }
 
     @Test
