@@ -17,6 +17,7 @@ import br.ce.wcaquino.buiders.FilmeBuilder;
 import br.ce.wcaquino.buiders.LocacaoBuilder;
 import br.ce.wcaquino.buiders.UsuarioBuilder;
 import br.ce.wcaquino.daos.LocacaoDAO;
+import br.ce.wcaquino.matchers.MatchersProprios;
 import org.hamcrest.MatcherAssert;
 import org.junit.*;
 import org.junit.rules.ErrorCollector;
@@ -28,10 +29,7 @@ import br.ce.wcaquino.entidades.Usuario;
 import br.ce.wcaquino.exceptions.FilmeSemEstoqueException;
 import br.ce.wcaquino.exceptions.LocadoraException;
 import br.ce.wcaquino.utils.DataUtils;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.mockito.MockitoAnnotations;
+import org.mockito.*;
 
 public class LocacaoServiceTest {
 
@@ -190,8 +188,24 @@ public class LocacaoServiceTest {
 
         //acao
         service.alugarFilme(usuario, filmes);
+    }
 
+    @Test
+    public void deveProrrogarUmaLocacao(){
+        //cenario
+        Locacao locacao = LocacaoBuilder.umLocacao().agora();
 
+        //acao
+        service.prorrogarLocacao(locacao, 3);
+
+        //verificacao
+        ArgumentCaptor<Locacao> argCapt = ArgumentCaptor.forClass(Locacao.class);
+        Mockito.verify(dao).salvar(argCapt.capture());
+        Locacao locacaoRetornada = argCapt.getValue();
+
+        error.checkThat(locacaoRetornada.getValor(), is(12.0));
+        error.checkThat(locacaoRetornada.getDataLocacao(), is(MatchersProprios.ehHoje()));
+        error.checkThat(locacaoRetornada.getDataRetorno(), is(MatchersProprios.ehHojeComDiferencaDias(1)));
 
     }
 }
